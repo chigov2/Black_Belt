@@ -12,13 +12,13 @@ public class Test2 {
 class Employee{
     int id;
     int salary;
-    String namme;
+    String name;
     String lastName;
 
-    public Employee(int id, int salary, String namme, String lastName) {
+    public Employee(int id, int salary, String name, String lastName) {
         this.id = id;
         this.salary = salary;
-        this.namme = namme;
+        this.name = name;
         this.lastName = lastName;
     }
 
@@ -27,7 +27,7 @@ class Employee{
         return "Test2{" +
                 "id=" + id +
                 ", salary=" + salary +
-                ", namme='" + namme + '\'' +
+                ", namme='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
