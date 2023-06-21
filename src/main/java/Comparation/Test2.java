@@ -17,7 +17,11 @@ public class Test2 {
         employeeList.add(emp3);
         System.out.println("Before sorting: " + employeeList);
         Collections.sort(employeeList,new IdComparator());
+
         System.out.println("After: " + employeeList);
+        System.out.println("name--------------");
+        Collections.sort(employeeList,new NameComparator());
+        System.out.println(employeeList);
     }
 
 }
@@ -68,5 +72,12 @@ class IdComparator implements Comparator<Employee>{
         }else if (employee1.id < employee2.id){
             return -1;
         }else return 1;
+    }
+}
+
+class NameComparator implements Comparator<Employee>{
+    @Override
+    public int compare(Employee employee1, Employee employee2) {
+        return employee1.name.compareTo(employee2.name);
     }
 }
