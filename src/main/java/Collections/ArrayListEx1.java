@@ -9,5 +9,6 @@ public class ArrayListEx1 {
         arrayList.add("Lena");
         arrayList.add("Max");
         arrayList.add("Alex");
+        System.out.println(arrayList);
     }
 }
