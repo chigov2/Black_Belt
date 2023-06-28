@@ -10,5 +10,6 @@ public class ArrayListEx1 {
         arrayList.add("Max");
         arrayList.add("Alex");
         System.out.println(arrayList);
+        System.out.println(arrayList);
     }
 }
