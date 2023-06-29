@@ -21,8 +21,11 @@ public class ArrayListEx2 {
         System.out.println(studentArrayList);
         Student st6 = new Student("Victor",'m',30,2,5.0);
 
-        studentArrayList.remove(st6);
+//        studentArrayList.remove(st6);
+        int index = studentArrayList.indexOf(st6);
         System.out.println(studentArrayList);
+        System.out.println("--");
+        System.out.println(index);
     }
 }
 class Student{
