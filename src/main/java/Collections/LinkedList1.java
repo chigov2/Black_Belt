@@ -27,6 +27,10 @@ public class LinkedList1 {
         linkedList.add(2,st7);
         System.out.println("---");
         System.out.println(linkedList);
+        System.out.println("---");
+        for (int i =0; i <linkedList.size(); i++){
+            System.out.println(linkedList.get(i));
+        }
 
     }
 }
