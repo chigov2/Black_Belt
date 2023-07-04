@@ -27,8 +27,7 @@ public class Test2 {
     }
 
 }
-class Employee
-       implements Comparable<Employee>
+class Employee implements Comparable<Employee>
 {
     int id;
     int salary;

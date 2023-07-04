@@ -23,7 +23,7 @@ public class ListIteratorExample {
             }
         }
         if (isPalindrome){
-            System.out.println("Palindrom");
+            System.out.println("Palindrome");
         }
         else {
             System.out.println("Not palindrome");
