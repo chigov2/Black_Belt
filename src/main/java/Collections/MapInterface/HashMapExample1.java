@@ -14,5 +14,8 @@ public class HashMapExample1 {
         map1.putIfAbsent(2,"ttt");
         System.out.println(map1);
         System.out.println(map1.get(25));
+        System.out.println(map1.containsValue("Max1 Stoba"));
+        System.out.println(map1.keySet());
+        System.out.println(map1.values());
     }
 }
