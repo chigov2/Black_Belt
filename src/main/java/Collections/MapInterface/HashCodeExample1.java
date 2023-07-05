@@ -15,6 +15,11 @@ public class HashCodeExample1 {
         map.put(student2,8.5);
         map.put(student3,7.9);
         System.out.println(map);
+        System.out.println("!!!!!!!!");
+        System.out.println("student1.hashCode= "+student1.hashCode());
+//        student1.course = 5;
+        System.out.println("student1.hashCode ="+student1.hashCode());
+        System.out.println("map.containsKey(student1) "+map.containsKey(student1));
 
         Student student4 = new Student("Mike","Stoba", 4);
         Student student5 = new Student("Vova","Sokirko", 5);
@@ -42,10 +47,10 @@ public class HashCodeExample1 {
     }
 }
 
-class Student{
-    String name;
-    String lastName;
-    int course;
+final class Student{
+    final String name;
+    final String lastName;
+    final int course;
 
     public Student(String name, String lastName, int course) {
         this.name = name;
