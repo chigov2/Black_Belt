@@ -12,13 +12,16 @@ public class TreeMapExample1 {
         Student student5 = new Student("Anna","Kovalchuk", 3);
         Student student6 = new Student("Alex","Gerasymliuk", 5);
         Student student7 = new Student("Alla","Gerasymliuk", 5);
-        treeMap.put(8.7,student1);
         treeMap.put(3.7,student5);
-        treeMap.put(7.7,student2);
-        treeMap.put(9.7,student7);
-        treeMap.put(6.7,student3);
         treeMap.put(4.7,student6);
         treeMap.put(5.7,student4);
+        treeMap.put(6.7,student3);
+        treeMap.put(7.7,student2);
+        treeMap.put(8.7,student1);
+        treeMap.put(9.7,student7);
+
+
+
         System.out.println(treeMap);
         System.out.println(treeMap.get(7.7));
         System.out.println(treeMap.descendingMap());
