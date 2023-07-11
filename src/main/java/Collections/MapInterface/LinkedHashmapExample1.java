@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 
 public class LinkedHashmapExample1 {
     public static void main(String[] args) {
-        LinkedHashMap<Double,Student> linkedHashMap = new LinkedHashMap<>(16,0.78f,false);
+        LinkedHashMap<Double,Student> linkedHashMap = new LinkedHashMap<>(16,0.78f,true);
         Student student1 = new Student("Mike","Stoba", 4);
         Student student2 = new Student("Max","Stoba", 3);
         Student student3 = new Student("Lena","Gerasymliuk", 5);
