@@ -18,7 +18,7 @@ public class LinkedHashmapExample1 {
         linkedHashMap.put(9.7,student7);
         linkedHashMap.put(3.7,student5);
         linkedHashMap.put(4.7,student6);
-        linkedHashMap.put(5.7,student4);
+        linkedHashMap.put(6.7,student4);
 
         System.out.println(linkedHashMap);
         System.out.println("get 3.7: "+ linkedHashMap.get(3.7));
