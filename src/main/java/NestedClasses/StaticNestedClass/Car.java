@@ -17,9 +17,10 @@ public class Car {
 
     static void  method(){
         System.out.println("method -----------");
-        System.out.println(Motor.countsOfMotors);
+        System.out.println("Motor.countOfMotors: "+Motor.countsOfMotors);
         Motor motor = new Motor(350);
-        System.out.println(Car.numberOfCars);
+        System.out.println("new motor.horsePower: "+motor.horsePower);
+        System.out.println("Car.numberOfCars: "+Car.numberOfCars);
 //        System.out.println(motor.horsePower);
         System.out.println(new Car("Blue",6,new Motor(500)));
     }
@@ -37,14 +38,14 @@ public class Car {
         static int countsOfMotors;
 
         public Motor(int horsePower) {
-            System.out.println(numberOfCars);
+            System.out.println("number of cars(Motor constructor: ) "+numberOfCars);
             this.horsePower = horsePower;
             countsOfMotors++;
         }
 
         @Override
         public String toString() {
-            return "Motor: {" +
+            return "(toString)Motor: {" +
                     "horsePower=" + horsePower +
                     '}';
         }
@@ -53,13 +54,13 @@ public class Car {
 
 class Test{
     public static void main(String[] args) {
-        Car.Motor m = new Car.Motor(200);
-        System.out.println(m);
-        Car car = new Car("red",4,m);
+        Car.Motor motor = new Car.Motor(200);
+        System.out.println(motor);
+        Car car = new Car("red",4,motor);
         Car car1 = new Car("white",3, new Car.Motor(300));
         System.out.println(car);
         System.out.println(car1);
-        System.out.println(Car.numberOfCars);
+        System.out.println("Car numberOfMotors: "+Car.numberOfCars);
         Car.method();
     }
 }
