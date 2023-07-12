@@ -2,26 +2,25 @@ package main.java.NestedClasses.InnerClasses;
 
 public class Car {
     String color;
-    int doorCount;
+    private int doorCount;
     Motor engine;
     static int numberOfCars;
 
-    public Car(String color, int doorCount, Motor engine) {
+//    public Car(String color, int doorCount, int horsePower) {
+    public Car(String color, int doorCount) {
+        Motor motor = new Motor(333);
+        System.out.println("Car constructor: "+motor.horsePower);
+        System.out.println("Car constructor");
         this.color = color;
         this.doorCount = doorCount;
-        this.engine = engine;
-        numberOfCars++;
+//        this.engine = this.new Motor(horsePower);
     }
 
-//    static void  method(){
-//        System.out.println("method -----------");
-////        System.out.println("Motor.countOfMotors: "+Motor.countsOfMotors);
-////        Motor motor = new Motor(350);
-//        System.out.println("new motor.horsePower: "+motor.horsePower);
-//        System.out.println("Car.numberOfCars: "+Car.numberOfCars);
-////        System.out.println(motor.horsePower);
-//        System.out.println(new Car("Blue",6,new Motor(500)));
-//    }
+    public void setEngine(Motor engine) {
+        System.out.println("setEngine: "+doorCount);
+        this.engine = engine;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
@@ -50,14 +49,15 @@ public class Car {
 
 class Test{
     public static void main(String[] args) {
-        Car.Motor motor = new Car.Motor(200);
+        Car car = new Car("Black",4);
+        //должны создать мотор
+        Car.Motor motor = car.new Motor(325);
+        car.setEngine(motor);
         System.out.println(motor);
-        Car car = new Car("red",4,motor);
-        Car car1 = new Car("white",3, new Car.Motor(300));
         System.out.println(car);
-        System.out.println(car1);
-        System.out.println("Car numberOfMotors: "+Car.numberOfCars);
-//        Car.method();
+
+        Car.Motor motor2 = new Car("white",5).new Motor(568);
+        System.out.println(motor2);
     }
 }
 
