@@ -1,6 +1,4 @@
-package main.java.NestedClasses.StaticNestedClass;
-
-import java.sql.SQLOutput;
+package main.java.NestedClasses.InnerClasses;
 
 public class Car {
     String color;
@@ -15,15 +13,15 @@ public class Car {
         numberOfCars++;
     }
 
-    static void  method(){
-        System.out.println("method -----------");
-        System.out.println("Motor.countOfMotors: "+Motor.countsOfMotors);
-        Motor motor = new Motor(350);
-        System.out.println("new motor.horsePower: "+motor.horsePower);
-        System.out.println("Car.numberOfCars: "+Car.numberOfCars);
-//        System.out.println(motor.horsePower);
-        System.out.println(new Car("Blue",6,new Motor(500)));
-    }
+//    static void  method(){
+//        System.out.println("method -----------");
+////        System.out.println("Motor.countOfMotors: "+Motor.countsOfMotors);
+////        Motor motor = new Motor(350);
+//        System.out.println("new motor.horsePower: "+motor.horsePower);
+//        System.out.println("Car.numberOfCars: "+Car.numberOfCars);
+////        System.out.println(motor.horsePower);
+//        System.out.println(new Car("Blue",6,new Motor(500)));
+//    }
     @Override
     public String toString() {
         return "Car{" +
@@ -33,14 +31,12 @@ public class Car {
                 '}';
     }
 
-   static class Motor {
+   class Motor {
         private int horsePower;
-        static int countsOfMotors;
 
         public Motor(int horsePower) {
-            System.out.println("number of cars(Motor constructor: ) "+numberOfCars);
             this.horsePower = horsePower;
-            countsOfMotors++;
+
         }
 
         @Override
@@ -61,12 +57,8 @@ class Test{
         System.out.println(car);
         System.out.println(car1);
         System.out.println("Car numberOfMotors: "+Car.numberOfCars);
-        Car.method();
+//        Car.method();
     }
 }
 
-class Z extends Car.Motor{
-    public Z(int horsePower) {
-        super(horsePower);
-    }
-}
+
