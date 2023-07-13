@@ -1,12 +1,13 @@
 package main.java.Lambda;
 
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 public class StudentInfo2 {
 
-    void testStudents(ArrayList<Student2> students2, StudentsCheks studentsCheks) {
+    void testStudents(ArrayList<Student2> students2, Predicate<Student2> student2Predicate) {
         for (Student2 st2 : students2) {
-            if (studentsCheks.check2(st2)) {
+            if (student2Predicate.test(st2)) {
                 System.out.println(st2);
             }
         }
@@ -33,8 +34,17 @@ class Test2 {
 
         System.out.println("lambda Новое написание---------------");
 
-        StudentsCheks st = (Student2 s1)->{ return s1.age >25;};
-        studentInfo2.testStudents(students2,st);
+//        StudentsCheks st = (Student2 s1)->{ return s1.age >25;};
+//        studentInfo2.testStudents(students2,st);
+        System.out.println("=========Predicate");
+        Predicate<Student2> p2 = st -> st.age < 49;
+        Predicate<Student2> p3 = st3 -> st3.course == 3;
+        studentInfo2.testStudents(students2,p2.negate());
+//        studentInfo2.testStudents(students2,p2.or(p3));
+//        studentInfo2.testStudents(students2,p2.and(p3));
+
+
+//        System.out.println("Predicate<Student2> p2 = st -> st.age < 49: " + );
 
         System.out.println("lambda short---------------");
         studentInfo2.testStudents(students2,s1-> s1.age >25);
@@ -59,8 +69,8 @@ class Test2 {
 
 }
 
-interface StudentsCheks {
-    boolean check2(Student2 st2);
-}
+//interface StudentsCheks {
+//    boolean check2(Student2 st2);
+//}
 
 
