@@ -1,6 +1,8 @@
 package main.java.Lambda;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class StudentInfo {
 
@@ -43,6 +45,21 @@ class Test {
         students.add(student4);
         students.add(student5);
         StudentInfo studentInfo = new StudentInfo();
+
+        System.out.println("sorting-----------");
+        //так можно не делать, а сразу вставлять лямбда
+//        Collections.sort(students, new Comparator<Student>() {
+//                    @Override
+//                    public int compare(Student o1, Student o2) {
+//                        return o1.course - o2.course;
+//                    }
+//                }
+//        );
+
+//        Collections.sort(students,(Student o1, Student o2)->{return o1.course - o2.course;});
+        Collections.sort(students,(s11, s12)->{return s11.course - s12.course;});
+        System.out.println(students);
+        System.out.println("---------------");
         studentInfo.printStudentsMixCondition(students,40,4,'m');
         System.out.println("---------------");
 
