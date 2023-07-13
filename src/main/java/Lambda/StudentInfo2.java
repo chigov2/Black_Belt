@@ -30,6 +30,26 @@ class Test2 {
         System.out.println("---------------");
         System.out.println("lambda---------------");
         studentInfo2.testStudents(students2,(Student2 s1)->{ return s1.age >25;});
+
+        System.out.println("lambda Новое написание---------------");
+
+        StudentsCheks st = (Student2 s1)->{ return s1.age >25;};
+        studentInfo2.testStudents(students2,st);
+
+        System.out.println("lambda short---------------");
+        studentInfo2.testStudents(students2,s1-> s1.age >25);
+
+        System.out.println("lambda short2---------------");
+        studentInfo2.testStudents(students2,s2-> {return s2.age >25;});
+
+        System.out.println("lambda short3---------------");
+        studentInfo2.testStudents(students2,(Student2 s3)-> s3.age >25);
+
+        System.out.println("lambda short4---------------");
+        studentInfo2.testStudents(students2,(Student2 s3)-> {
+            System.out.println("Hello");
+            return s3.age >25;});
+
         System.out.println("lambda2---------------");
         studentInfo2.testStudents(students2,(Student2 s2)->{return s2.avrGrade >8;});
         System.out.println("lambda3---------------");
@@ -42,4 +62,5 @@ class Test2 {
 interface StudentsCheks {
     boolean check2(Student2 st2);
 }
+
 
