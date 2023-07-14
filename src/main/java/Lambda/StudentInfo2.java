@@ -1,6 +1,8 @@
 package main.java.Lambda;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class StudentInfo2 {
@@ -13,6 +15,8 @@ public class StudentInfo2 {
         }
     }
 }
+
+
 
 class Test2 {
     public static void main(String[] args) {
@@ -30,7 +34,9 @@ class Test2 {
         StudentInfo2 studentInfo2 = new StudentInfo2();
         System.out.println("---------------");
         System.out.println("lambda---------------");
-        studentInfo2.testStudents(students2,(Student2 s1)->{ return s1.age >25;});
+        studentInfo2.testStudents(students2, (Student2 s1) -> {
+            return s1.age > 25;
+        });
 
         System.out.println("lambda Новое написание---------------");
 
@@ -39,7 +45,7 @@ class Test2 {
         System.out.println("=========Predicate");
         Predicate<Student2> p2 = st -> st.age < 49;
         Predicate<Student2> p3 = st3 -> st3.course == 3;
-        studentInfo2.testStudents(students2,p2.negate());
+        studentInfo2.testStudents(students2, p2.negate());
 //        studentInfo2.testStudents(students2,p2.or(p3));
 //        studentInfo2.testStudents(students2,p2.and(p3));
 
@@ -47,30 +53,46 @@ class Test2 {
 //        System.out.println("Predicate<Student2> p2 = st -> st.age < 49: " + );
 
         System.out.println("lambda short---------------");
-        studentInfo2.testStudents(students2,s1-> s1.age >25);
+        studentInfo2.testStudents(students2, s1 -> s1.age > 25);
 
         System.out.println("lambda short2---------------");
-        studentInfo2.testStudents(students2,s2-> {return s2.age >25;});
+        studentInfo2.testStudents(students2, s2 -> {
+            return s2.age > 25;
+        });
 
         System.out.println("lambda short3---------------");
-        studentInfo2.testStudents(students2,(Student2 s3)-> s3.age >25);
+        studentInfo2.testStudents(students2, (Student2 s3) -> s3.age > 25);
 
         System.out.println("lambda short4---------------");
-        studentInfo2.testStudents(students2,(Student2 s3)-> {
+        studentInfo2.testStudents(students2, (Student2 s3) -> {
             System.out.println("Hello");
-            return s3.age >25;});
+            return s3.age > 25;
+        });
 
         System.out.println("lambda2---------------");
-        studentInfo2.testStudents(students2,(Student2 s2)->{return s2.avrGrade >8;});
+        studentInfo2.testStudents(students2, (Student2 s2) -> {
+            return s2.avrGrade > 8;
+        });
         System.out.println("lambda3---------------");
-        studentInfo2.testStudents(students2,(Student2 q)->{return q.age > 25 && q.sex == 'f';});
+        studentInfo2.testStudents(students2, (Student2 q) -> {
+            return q.age > 25 && q.sex == 'f';
+        });
 
+        double res = avgOfSomething(students2, studentF -> studentF.avrGrade);
+        System.out.println("-----Function---------");
+        System.out.println(res);
+    }
+
+    private static double avgOfSomething(List<Student2> list,
+                                         Function<Student2, Double> f) {
+        double result = 0;
+        for (Student2 stu2 : list) {
+            result += f.apply(stu2);
+        }
+        result = result / list.size();
+        return result;
     }
 
 }
-
-//interface StudentsCheks {
-//    boolean check2(Student2 st2);
-//}
 
 

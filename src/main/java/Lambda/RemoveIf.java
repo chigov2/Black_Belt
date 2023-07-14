@@ -13,7 +13,7 @@ public class RemoveIf {
         arrayList.add("661");
         arrayList.add("77324");
 //        arrayList.removeIf(element->element.length()<4);
-        Predicate<String> pr = (element->element.length()<4);
+        Predicate<String> pr =element->element.length()<4;
         arrayList.removeIf(pr);
         System.out.println(arrayList);
     }
