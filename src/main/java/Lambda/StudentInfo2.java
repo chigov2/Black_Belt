@@ -15,9 +15,6 @@ public class StudentInfo2 {
         }
     }
 }
-
-
-
 class Test2 {
     public static void main(String[] args) {
         Student2 student1 = new Student2("Mike", 'm', 50, 4, 4.6);
