@@ -1,8 +1,6 @@
 package main.java.Stream;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StreamTest1 {
@@ -20,7 +18,7 @@ public class StreamTest1 {
         list.stream().map(el -> el.length());
 //        List <Integer> list2 = list.stream().map(el->el.length());
         List<Integer> list2 = list.stream().map(el -> el.length()).collect(Collectors.toList());
-        System.out.println(list2);
+//        System.out.println(list2);
         int[] array0 = {1, 3, 6, 8, 90, 56};
         Arrays.stream(array0).map(element -> {
             if (element % 3 == 0) {
@@ -29,6 +27,13 @@ public class StreamTest1 {
             return element;
         }).toArray();
         System.out.println(Arrays.toString(array0));
+
+        Set<String> set = new TreeSet<>();
+        set.add("Hello");
+        set.add("Ин");
+        set.add("Are you OK?");
+        set.add("Yes");
+        set.add("Good bye");
     }
 }
 
