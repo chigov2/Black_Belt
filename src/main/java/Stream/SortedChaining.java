@@ -1,6 +1,10 @@
 package main.java.Stream;
 
+import main.java.Lambda.Student2;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class SortedChaining {
     public static void main(String[] args) {
@@ -14,6 +18,86 @@ public class SortedChaining {
 //                .reduce((a,e)->a+e).getAsInt();
                 .reduce(Integer::sum).getAsInt();
         System.out.println(result);
-        //3 45 3
+        System.out.println("--------------");
+//увеличить буквы в именах студентов
+        List<Student02> students02 = new ArrayList<>();
+        Student02 student1 = new Student02("Mike", 'm', 50, 4, 4.6);
+        Student02 student2 = new Student02("Alex", 'm', 25, 3, 5.6);
+        Student02 student3 = new Student02("Lena", 'f', 50, 2, 7.6);
+        Student02 student4 = new Student02("Max", 'm', 15, 1, 9.6);
+        Student02 student5 = new Student02("Vova", 'm', 52, 4, 7.3);
+
+        students02.add(student1);
+        students02.add(student2);
+        students02.add(student3);
+        students02.add(student4);
+        students02.add(student5);
+    }
+}
+
+class Student02 {
+    private String name;
+    private char sex;
+    private int age;
+    private int course;
+    private double avrGrade;
+
+    public Student02(String name, char sex, int age, int course, double avrGrade) {
+        this.name = name;
+        this.sex = sex;
+        this.age = age;
+        this.course = course;
+        this.avrGrade = avrGrade;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public char getSex() {
+        return sex;
+    }
+
+    public void setSex(char sex) {
+        this.sex = sex;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getCourse() {
+        return course;
+    }
+
+    public void setCourse(int course) {
+        this.course = course;
+    }
+
+    public double getAvrGrade() {
+        return avrGrade;
+    }
+
+    public void setAvrGrade(double avrGrade) {
+        this.avrGrade = avrGrade;
+    }
+
+    @Override
+    public String toString() {
+        return "Student02 {" +
+                "name='" + name + '\'' +
+                ", sex=" + sex +
+                ", age=" + age +
+                ", course=" + course +
+                ", avrGrade=" + avrGrade +
+                '}';
     }
 }
