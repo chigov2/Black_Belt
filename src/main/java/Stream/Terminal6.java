@@ -17,6 +17,11 @@ public class Terminal6 {
         Stream<Integer> stream3 = Stream.of(6,7,8,9,10);
         Stream<Integer> stream4 = Stream.concat(stream2,stream3);
         stream4.forEach(el-> System.out.println(el));
+        System.out.println("---3---");
+        Stream<Integer> stream5 = Stream.of(1,2,3,4,3,4,5,1,2,3);
+//        stream5.distinct().forEach(System.out::println);
+        System.out.println(stream5.distinct().count());
+
     }
 
 
