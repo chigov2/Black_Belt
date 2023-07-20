@@ -25,13 +25,22 @@ public class SortedChaining {
         Student02 student2 = new Student02("Alex", 'm', 25, 3, 5.6);
         Student02 student3 = new Student02("Lena", 'f', 50, 2, 7.6);
         Student02 student4 = new Student02("Max", 'm', 15, 1, 9.6);
-        Student02 student5 = new Student02("Vova", 'm', 52, 4, 7.3);
+        Student02 student5 = new Student02("Alla", 'f', 62, 4, 7.3);
 
         students02.add(student1);
         students02.add(student2);
         students02.add(student3);
         students02.add(student4);
         students02.add(student5);
+
+        students02.stream().map(element->
+        {
+            element.setName(element.getName().toUpperCase());
+            return element;
+        })
+        .filter(element->element.getSex() == 'f')
+        .sorted((x, y) -> x.getAge() - y.getAge())
+        .forEach(element-> System.out.println(element));
     }
 }
 
