@@ -22,17 +22,20 @@ public class MapToInt {
                .boxed()//int to Integer
                .collect(Collectors.toList());
         System.out.print("Courses: ");
-
         System.out.println(courses);
+
         System.out.println("======sum=======");
         int summ = students.stream().mapToInt(el->el.getAge()).sum();
         System.out.println(summ);
+
         System.out.println("----min------");
         int min = students.stream().mapToInt(el->el.getAge()).min().getAsInt();
         System.out.println(min);
+
         System.out.println("======averageum=======");
         Double average = students.stream().mapToInt(el->el.getAge()).average().getAsDouble();
         System.out.println(average);
+
         System.out.println("----max------");
         int max = students.stream().mapToInt(el->el.getAge()).max().getAsInt();
         System.out.println(max);
