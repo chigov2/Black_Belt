@@ -19,11 +19,18 @@ public class Collect {
         students.add(student4);
         students.add(student5);
         Map<Integer, List<Student>> listMap = students.stream().map(el->{el.setName(el.getName().toUpperCase());
-        return el;
-        })
+        return el;})
                 .collect(Collectors.groupingBy(el->el.getCourse()));
+        System.out.println("-----Map.Entry-------");
 
         for (Map.Entry<Integer, List<Student>> entry: listMap.entrySet()){
+            System.out.println(entry.getKey() + ": "+ entry.getValue());
+        }
+
+        System.out.println("-----partitionBy---------");
+        Map<Boolean, List<Student>> listMap2 = students.stream().collect(Collectors.partitioningBy(el->el.getAvrGrade()>7));
+
+        for (Map.Entry<Boolean, List<Student>> entry: listMap2.entrySet()){
             System.out.println(entry.getKey() + ": "+ entry.getValue());
         }
     }

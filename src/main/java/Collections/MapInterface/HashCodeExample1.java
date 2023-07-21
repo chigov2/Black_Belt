@@ -35,7 +35,7 @@ public class HashCodeExample1 {
         System.out.println("------");
         System.out.println("student5 hashcode: " + student5.hashCode());
         System.out.println("student6 hashcode: " + student6.hashCode());
-        System.out.println("-----------");
+        System.out.println("-----EntrySet------");
 
         for (Map.Entry<Student,Double> entry : map.entrySet()){
             System.out.println(entry.getKey() + ";" +entry.getValue());
