@@ -1,7 +1,7 @@
 package main.java.NestedClasses.Anonymus;
 
 public class Anonymus {
-    private  int с = 5;
+    private  int с = 89;
     public static void main(String[] args) {
         Math m = new Math() {
             @Override
