@@ -1,7 +1,6 @@
 package main.java.MultiThraiding;
 
 public class Sync12 {
-//    static final ToSync toSync = new ToSync();
     static final Object lock = new Object();
 
     public static void main(String[] args) {
@@ -12,10 +11,8 @@ public class Sync12 {
         thread2.start();
         thread3.start();
     }
-//    synchronized void mobileCall() {
         void mobileCall() {
         synchronized (lock){
-//        System.out.println(this);
         System.out.println("Mobile call starts");
         try {
             Thread.sleep(3000);
@@ -24,26 +21,23 @@ public class Sync12 {
         }
         System.out.println("Mobile call ends");}
     }
-
     void skypeCall() {
         synchronized (lock) {
 //            System.out.println(this);
             System.out.println("Skype call starts");
             try {
-                Thread.sleep(5000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             System.out.println("Skype call ends");
         }
     }
-
     void whatsAppCall() {
         synchronized (lock) {
-//            System.out.println(this);
             System.out.println("WhatsApp call starts");
             try {
-                Thread.sleep(7000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -51,27 +45,19 @@ public class Sync12 {
         }
     }
 }
-
 class RunnableImplMobile implements Runnable {
     @Override
     public void run() {
         new Sync12().mobileCall();
     }
 }
-
 class RunnableImplSkype implements Runnable {
     @Override
-    public void run() {
-        new Sync12().skypeCall();
-        ;
-    }
+    public void run() { new Sync12().skypeCall();}
 }
-
 class RunnableImplWhatsUp implements Runnable {
     @Override
     public void run() {
         new Sync12().whatsAppCall();
     }
 }
-
-//class  ToSync{}
