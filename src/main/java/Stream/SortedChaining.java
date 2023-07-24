@@ -40,8 +40,7 @@ public class SortedChaining {
         })
         .filter(element->element.getSex() == 'f')
         .sorted((x, y) -> x.getAge() - y.getAge())
-//        .forEach(element-> System.out.println(element));
-        .forEach(System.out::println);
+        .forEach(System.out::println);//        .forEach(element-> System.out.println(element));
         System.out.println("---------findFirst--------");
 
         Student02 studentFirst = students02.stream().map(element->

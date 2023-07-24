@@ -2,6 +2,7 @@ package main.java.Stream;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamEx1 {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class StreamEx1 {
 //        for (int i = 0; i < list.size(); i++){
 //            list.set(i, String.valueOf(list.get(i).length()));
 //        }
-        List<Integer> list2 = (List<Integer>) list.stream().map(el->el.length());
+        List<Integer> list2 = (List<Integer>) list.stream().map(el->el.length()).collect(Collectors.toList());
         System.out.println(list);
     }
 
