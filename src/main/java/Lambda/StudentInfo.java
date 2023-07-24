@@ -57,7 +57,7 @@ class Test {
 //        );
 
 //        Collections.sort(students,(Student o1, Student o2)->{return o1.course - o2.course;});
-        Collections.sort(students,(s11, s12)->{return s11.course - s12.course;});
+        Collections.sort(students,(s1, s2)->{return s1.course - s2.course;});
         System.out.println(students);
         System.out.println("---------------");
         studentInfo.printStudentsMixCondition(students,40,4,'m');

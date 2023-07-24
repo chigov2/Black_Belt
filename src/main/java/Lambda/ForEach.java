@@ -14,7 +14,7 @@ public class ForEach {
 //        list.forEach(text-> System.out.println(text));
         list.forEach(System.out::println);
 
-        System.out.println("------------");
+        System.out.println("----lambda--------");
         List<Integer> list2 = new ArrayList<>();
         list2.add(1);
         list2.add(2);
@@ -23,8 +23,8 @@ public class ForEach {
         list2.add(5);
         list2.forEach(element -> {
             System.out.println(element);
-            element *= 2;
-            System.out.println(element);
+//            element *= 2;
+//            System.out.println(element);
         });
     }
 }
