@@ -18,7 +18,9 @@ class Counter{
 }
 
 class MyRunnableEx2 implements Runnable{
-    public void counterFunc(){
+
+    public synchronized void counterFunc(){
+
         Counter.count++;
         System.out.print(Counter.count + " ");
     }
