@@ -24,7 +24,7 @@ class R2 implements Runnable{
     @Override
     public void run() {
         for (int i = 0; i<1000; i++){
-            Sync2.increment();
+            Sync3.increment();
         }
     }
 }
