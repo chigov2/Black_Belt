@@ -1,8 +1,8 @@
 package main.java.MultiThraiding;
 
-public class Sync1 {
+public class SyncBlock1 {
     public static void main(String[] args) {
-        MyRunnableEx3 runnable = new MyRunnableEx3();
+        MyRunnableBlock3 runnable = new MyRunnableBlock3();
         Thread thread1 = new Thread(runnable);
         Thread thread2 = new Thread(runnable);
         Thread thread3 = new Thread(runnable);
@@ -10,20 +10,13 @@ public class Sync1 {
         thread2.start();
         thread3.start();
     }
-
-
 }
-class Counter2{
+
+class Counter1{
     static int count = 0;
 }
 
-class MyRunnableEx3 implements Runnable{
-
-    public synchronized void doWork1(){
-
-        Counter2.count++;
-        System.out.println(Counter2.count);
-    }
+class MyRunnableBlock3 implements Runnable{
     @Override
     public void run() {
         for (int i =0; i < 3; i++){
@@ -31,4 +24,17 @@ class MyRunnableEx3 implements Runnable{
         }
 
     }
+
+    private void doWork2(){
+        System.out.println("Hello");
+    }
+
+    private void doWork1(){
+        doWork2();
+        synchronized(this) {
+            Counter1.count++;
+            System.out.println(Counter1.count);
+        }
+    }
 }
+
