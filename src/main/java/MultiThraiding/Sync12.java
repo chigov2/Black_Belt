@@ -4,9 +4,9 @@ public class Sync12 {
     static final Object lock = new Object();
 
     public static void main(String[] args) {
-        Thread thread1 = new Thread(new RunnableImplMobile());
-        Thread thread2 = new Thread(new RunnableImplSkype());
-        Thread thread3 = new Thread(new RunnableImplWhatsUp());
+        Thread thread1 = new Thread(new Mobile());
+        Thread thread2 = new Thread(new Skype());
+        Thread thread3 = new Thread(new WhatsUp());
         thread1.start();
         thread2.start();
         thread3.start();
@@ -45,19 +45,15 @@ public class Sync12 {
         }
     }
 }
-class RunnableImplMobile implements Runnable {
+class Mobile implements Runnable {
     @Override
-    public void run() {
-        new Sync12().mobileCall();
-    }
+    public void run() {new Sync12().mobileCall();}
 }
-class RunnableImplSkype implements Runnable {
+class Skype implements Runnable {
     @Override
     public void run() { new Sync12().skypeCall();}
 }
-class RunnableImplWhatsUp implements Runnable {
+class WhatsUp implements Runnable {
     @Override
-    public void run() {
-        new Sync12().whatsAppCall();
-    }
+    public void run() {new Sync12().whatsAppCall();}
 }
