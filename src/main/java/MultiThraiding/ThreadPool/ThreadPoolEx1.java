@@ -1,4 +1,4 @@
-package main.java.MultiThraiding;
+package main.java.MultiThraiding.ThreadPool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
