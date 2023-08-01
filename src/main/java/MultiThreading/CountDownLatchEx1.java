@@ -16,7 +16,6 @@ public class CountDownLatchEx1 {
         openMarket();
     }
 
-
     private static void marketStaffIsOnPlace() throws InterruptedException {
         Thread.sleep(2000);
         System.out.println("Market staff came to work");
