@@ -26,7 +26,6 @@ public class ThreadPoolScheduled {
     }
 }
 
-
 class RunnableImpl200 implements Runnable{
     @Override
     public void run() {
@@ -35,5 +34,4 @@ class RunnableImpl200 implements Runnable{
 //        catch (InterruptedException e) {e.printStackTrace();}
         System.out.println(Thread.currentThread().getName() +" stop works");
     }
-
 }
