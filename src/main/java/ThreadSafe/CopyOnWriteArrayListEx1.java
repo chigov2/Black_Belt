@@ -35,15 +35,15 @@ public class CopyOnWriteArrayListEx1 {
             list.remove(4);
             list.add("Sergey");
         };
-
-        Thread thread1 = new Thread(runnable1);
         Thread thread2 = new Thread(runnable2);
+        Thread thread1 = new Thread(runnable1);
 
-        thread1.start();
         thread2.start();
+        thread1.start();
 
-        thread1.join();
         thread2.join();
+        thread1.join();
+
         System.out.println(list);
     }
 }
