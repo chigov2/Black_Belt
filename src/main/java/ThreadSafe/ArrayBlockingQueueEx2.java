@@ -7,7 +7,7 @@ public class ArrayBlockingQueueEx2 {
         ArrayBlockingQueue<Integer> arrayBlockingQueue = new ArrayBlockingQueue<>(4);
 
         //producer
-        Thread thread1 = new Thread();
+//        Thread thread1 = new Thread();
         new Thread(()->{
             int i = 0;
             while (true){
