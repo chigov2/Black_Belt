@@ -25,14 +25,14 @@ public class SynchronizedCollectionsEx2 {
 //        Runnable runnable2 = ()->{arrayList.remove(10);};
         Runnable runnable2 = ()->syncList.remove(10);
 
-        Thread thread1 = new Thread(runnable1);// из-за синхронайзед поток 2 будет ждать пока 1 поток не завершит работу
-        Thread thread2 = new Thread(runnable2);
+        Thread thread1 = new Thread(runnable2);// из-за синхронайзед поток 2 будет ждать пока 1 поток не завершит работу
+        Thread thread2 = new Thread(runnable1);
 
-        thread1.start();
         thread2.start();
-        thread1.join();
+        thread1.start();
         thread2.join();
-        System.out.println(syncList);
+        thread1.join();
+        System.out.println("syncList: " + syncList);
 
     }
 }

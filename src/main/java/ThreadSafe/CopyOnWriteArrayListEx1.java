@@ -13,7 +13,7 @@ public class CopyOnWriteArrayListEx1 {
         list.add("Lena");
         list.add("Alla");
         list.add("Alex");
-        System.out.println(list);
+        System.out.println("First list: " +list);
 
         Runnable runnable2 = ()-> {Iterator<String> iterator = list.iterator();
         while (iterator.hasNext()){
