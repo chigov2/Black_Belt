@@ -4,7 +4,8 @@ import java.io.*;
 
 public class CopyEx2 {
     public static void main(String[] args) throws IOException{
-        try(FileInputStream inputStream = new FileInputStream("C:\\Users\\ANDREY\\Desktop\\file.jpg");
+//        try(FileInputStream inputStream = new FileInputStream("C:\\Users\\ANDREY\\Desktop\\file.jpg");
+        try(FileInputStream inputStream = new FileInputStream("G:\\OneDrive2022\\OneDrive\\Desktop\\Мах.jpg");
             FileOutputStream outputStream = new FileOutputStream("file.jpg"))
         {
 //            int character;
