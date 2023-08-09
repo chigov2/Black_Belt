@@ -10,8 +10,8 @@ public class SerializationEx2 {
         Car car = new Car("Bently","Black");
         Car car1 = new Car("BMW","red");
 
-        Employee employee = new Employee("Mike","IT",50,6000,car);
-        Employee employee1 = new Employee("Max","IT",20,6000, car1);
+        Employee employee = new Employee("Mike","Stoba","IT",6000,car);
+        Employee employee1 = new Employee("Max","Stoba","HR",6000, car1);
 
         try(ObjectOutputStream outputStream = new ObjectOutputStream(
                 new FileOutputStream("Employees2.bin"))){
