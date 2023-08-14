@@ -18,6 +18,7 @@ public class ChannelBufferEx2 {
             System.out.println((char) buffer.get());
             System.out.println((char) buffer.get());
             System.out.println((char) buffer.get());
+            System.out.println("------rewind--------");
             buffer.rewind();
             System.out.println((char) buffer.get());
             System.out.println("------compact--------");
