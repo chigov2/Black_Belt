@@ -16,10 +16,12 @@ public class ChannelBufferEx1 {
             StringBuilder stih = new StringBuilder();
 
             int byteRead = channel.read(buffer);//чатая из файла инфо, записываем в буфер
+
+            System.out.println("byteRead: " + byteRead);
             while (byteRead > 0){
                 System.out.println("Прочитано: " + byteRead);
                 buffer.flip();
-            //чтение из из буфера и запись в файл
+            //чтение из из буфера и запись в stih
                 while (buffer.hasRemaining()){
                    stih.append((char)buffer.get());
                 }
