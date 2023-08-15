@@ -16,7 +16,7 @@ public class ConcurrentHashMapEx1 {
         System.out.println(hashMap);
 
         Runnable runnable1 = ()-> {
-                                                //получаем из hashmap множество его ключей
+                                         //получаем из hashmap множество его ключей
             Iterator<Integer> iterator = hashMap.keySet().iterator();
             while (iterator.hasNext())
                 {try {Thread.sleep(100);}//////////////
