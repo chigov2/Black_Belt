@@ -29,7 +29,7 @@ public class PathAndFilesEx1 {
         System.out.println("-----------------------");
         System.out.println("directoryPath.resolve(filePath): " + directoryPath.resolve(filePath));
         System.out.println("-----------------------");
-        System.out.println("directoryPath.relativize(anotherPath) : " + directoryPath.relativize(anotherPath));
+        System.out.println("directoryPath.relativize(anotherPath): " +  directoryPath.relativize(anotherPath));
         System.out.println("-----------------------");
         System.out.println("-----------------------");
         if(!Files.exists(directoryPath)){
