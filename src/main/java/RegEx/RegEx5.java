@@ -12,14 +12,14 @@ public class RegEx5 {
         Pattern pattern = Pattern.compile("(\\d{4})(\\d{4})(\\d{4})(\\d{4})(\\d{2})(\\d{2})(\\d{3})");
         Matcher matcher = pattern.matcher(myString);//matcher - искать в myString pattern
 
-//        String myNewString = matcher.replaceAll("$5/$6 $1 $2 $3 $4 ($7)");
 
-//        System.out.println(myNewString);
 
         while (matcher.find()){
-            System.out.println(matcher.group(7));
+            System.out.println(matcher.group());
         }
+        String myNewString = matcher.replaceAll("$5/$6 $1 $2 $3 $4 ($7)");
 
+        System.out.println(myNewString);
 
     }
 }

@@ -12,8 +12,8 @@ public class ChannelBufferEx2 {
              FileChannel channel = file.getChannel()) {
 
             ByteBuffer buffer = ByteBuffer.allocate(5);
-            //читаем информацию из файла в буфер
-            channel.read(buffer);
+
+            channel.read(buffer);//читаем информацию из файла в буфер
             buffer.flip();//чтобы можно было читать из буфера
             System.out.println((char) buffer.get());
             System.out.println((char) buffer.get());
