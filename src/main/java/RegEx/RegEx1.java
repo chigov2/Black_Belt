@@ -15,9 +15,9 @@ public class RegEx1 {
 //        Pattern pattern = Pattern.compile("\\w{1,15}@\\w+\\.\\w+");
 //        Pattern pattern = Pattern.compile("\\w{1,15}@\\w+\\.(ru|com)");
 
-//        Pattern pattern = Pattern.compile("(\\w|\\W)\\s+\\w");
+        Pattern pattern = Pattern.compile("(\\w|\\W)\\s+\\w");
 
-        Pattern pattern = Pattern.compile("A(2,3)");
+//        Pattern pattern = Pattern.compile("I(1)");
         Matcher matcher = pattern.matcher(s);
         while (matcher.find()){
 //            System.out.println("Position: " + matcher.start() + " " + matcher.group());
