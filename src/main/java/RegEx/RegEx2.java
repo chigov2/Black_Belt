@@ -10,13 +10,14 @@ public class RegEx2 {
 //        String s1 = "AMBYCFHCVNCdeFLkSJSYENRKRT";
 
 //        String s1 = "фиыты qwe kfddskfsd ldsfk";
-        String s1 = "asas---- &&&&++++++ T========kfddskfsd-ldsfk";
+        String s1 = "asas---- &&&&++++++ Tdhfjdj========kfddskfsd-ldsfk";
 //        Pattern pattern1 = Pattern.compile("[ABC]");
 //        Pattern pattern1 = Pattern.compile("AM[C-F]SY");
 //        Pattern pattern1 = Pattern.compile("\\w+");
 //        Pattern pattern1 = Pattern.compile("\\W");
 //        Pattern pattern1 = Pattern.compile("\\W+");
-        Pattern pattern1 = Pattern.compile("\\W{3}");
+//        Pattern pattern1 = Pattern.compile("\\W{1,4}");
+        Pattern pattern1 = Pattern.compile("\\w{1,5}");
 
         Matcher matcher1 = pattern1.matcher(s1);
 
