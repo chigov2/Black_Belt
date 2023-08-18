@@ -10,7 +10,7 @@ public class PrintfEx1 {
         employeeInfo(employee2);
         employeeInfo(employee3);
 
-        String newString = String.format("%03d \t %-12s \t %-12s \t %,.2f", 1,"Mikee", "Chigov", 2000.2);
+        String newString = String.format("%03d \t %-12s \t %-12s \t %,.1f", 1,"Mikee", "Chigov", 2000.2);
         System.out.println(newString);
 
 
