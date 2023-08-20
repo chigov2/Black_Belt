@@ -1,7 +1,9 @@
 package main.java.Reflections_examples;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
 public class Ex1 {
@@ -61,6 +63,33 @@ public class Ex1 {
                     + " Renurn type: " + pm.getReturnType()
                     + " Parameter types: " + Arrays.toString(pm.getParameterTypes()));
 
+        }
+
+        System.out.println("----only public methods--------------");
+        Method [] publicMethods = employeeClass.getDeclaredMethods();
+        for (Method pm : privateMethods) {
+            if (Modifier.isPublic(pm.getModifiers())) {
+                System.out.println("Name of method: " + pm.getName() + ", "
+                        + " Renurn type: " + pm.getReturnType()
+                        + " Parameter types: " + Arrays.toString(pm.getParameterTypes()));
+            }
+        }
+
+        System.out.println("----Constructor--------------");
+        Constructor constructor1 = employeeClass.getConstructor();
+        System.out.println("Constructor has " + constructor1.getParameterCount()
+                + " Their types are: " + Arrays.toString(constructor1.getParameterTypes()));
+
+        System.out.println("----Constructor 3 parameters--------------");
+        Constructor constructor2 = employeeClass.getConstructor(int.class,String.class, String.class
+        );
+        System.out.println("Constructor has " + constructor2.getParameterCount() + " parameters."
+                + " Their types are: " + Arrays.toString(constructor2.getParameterTypes()));
+
+        System.out.println("----All Constructors--------------");
+        Constructor[] constructors = employeeClass.getConstructors();
+        for (Constructor constructor : constructors){
+            System.out.println(constructor.getName() + " " + constructor.getParameterCount() + " " +Arrays.toString(constructor.getParameterTypes()));
         }
     }
 
