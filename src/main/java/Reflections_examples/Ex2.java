@@ -5,7 +5,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Ex2 {
+public class   Ex2 {
     public static void main(String[] args) throws
             NoSuchMethodException,
             IllegalAccessException,
