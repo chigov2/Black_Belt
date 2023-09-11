@@ -1,0 +1,13 @@
+
+public class Main {
+    public static void main(String[] args) {
+        String course = "Java";
+        String language = "Java";
+        boolean result = checkCourse(course, language);
+        System.out.println(result);
+    }
+
+    public static boolean checkCourse(String course, String language) {
+        return course.equals(language);
+    }
+}
