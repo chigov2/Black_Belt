@@ -11,7 +11,6 @@ public class MinMax {
         //Write code below this line
         int[] minMax = new int[2];
 
-
         if (results.length != 0) {
 
             int min = results[0];
@@ -23,8 +22,8 @@ public class MinMax {
                     min = results[i];
                 }
             }
-            minMax[0] = min;
-            minMax[1] = max;
+            minMax[0] = max;
+            minMax[1] = min;
             System.out.println("min: " + minMax[0]);
             System.out.println("max: " + minMax[1]);
         }
