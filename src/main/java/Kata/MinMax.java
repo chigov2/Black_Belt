@@ -2,8 +2,8 @@ package main.java.Kata;
 
 public class MinMax {
     public static void main(String[] args) {
-        int[] test = {};
-//        int[] test = {;
+//        int[] test = {};
+        int[] test = {34, -345, -1, 100};
         getSpeedStatistic(test);
     }
 
@@ -22,8 +22,8 @@ public class MinMax {
                     min = results[i];
                 }
             }
-            minMax[0] = max;
-            minMax[1] = min;
+            minMax[1] = max;
+            minMax[0] = min;
             System.out.println("min: " + minMax[0]);
             System.out.println("max: " + minMax[1]);
         }
