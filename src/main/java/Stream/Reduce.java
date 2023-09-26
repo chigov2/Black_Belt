@@ -14,8 +14,8 @@ public class Reduce {
         list1.add(12);
         list1.add(33);
 
-        int result = list1.stream().reduce((accumulator,element)->accumulator*element).get();
-        int result2 = list1.stream().reduce(1,(accumulator,element)->accumulator*element);
+        int result = list1.stream().reduce((accumulator,element)->accumulator * element).get();
+        int result2 = list1.stream().reduce(1,(accumulator,element)->accumulator * element);
         System.out.println(result);
         System.out.println("------------");
         System.out.println(result2);
