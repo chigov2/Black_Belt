@@ -1,6 +1,7 @@
 package main.java.Kata.Practeice.Test;
 
 import java.math.BigInteger;
+import java.util.Arrays;
 
 //I need to save some money to buy a gift. I think I can do something like that:
 //
@@ -31,6 +32,8 @@ import java.math.BigInteger;
 public class Finance {
     public static void main(String[] args) {
         finance(6);
+//        finance(5);
+//        finance(4);
     }
 
     public static BigInteger finance(int n) {
@@ -39,10 +42,12 @@ public class Finance {
         int[] array = new int[t];
         for (int i = 0; i < t; i++) {
             array[i] = i + n;
-            System.out.println(array[i]);
         }
-//        System.out.println(array);
-//        System.out.println("sum: " + sum);
+        for (int i=0; i < t; i++){
+            System.out.print(array[i] + " ");
+        }
+        int sum1 = Arrays.stream(array).sum();
+        System.out.println("sum: " + sum1);
 
         // your code
         return BigInteger.valueOf(0);
