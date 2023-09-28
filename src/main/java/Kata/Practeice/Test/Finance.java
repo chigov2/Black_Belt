@@ -30,9 +30,20 @@ import java.math.BigInteger;
 
 public class Finance {
     public static void main(String[] args) {
-
+        finance(6);
     }
+
     public static BigInteger finance(int n) {
+        int sum = 0;
+        int t = n + 1;
+        int[] array = new int[t];
+        for (int i = 0; i < t; i++) {
+            array[i] = i + n;
+            System.out.println(array[i]);
+        }
+//        System.out.println(array);
+//        System.out.println("sum: " + sum);
+
         // your code
         return BigInteger.valueOf(0);
     }
