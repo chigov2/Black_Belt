@@ -26,6 +26,7 @@ import java.util.Arrays;
 //        finance(6) --> 168
 //        finance(7) --> 252
 //        finance(5000) --> 62537505000
+//                          62537505000
 //        Note:
 //        your solution will be nicer without loops.
 
