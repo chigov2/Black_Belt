@@ -32,7 +32,7 @@ public class Digitize {
 //                .toArray();
 //    }
 
-// return new StringBuilder(S tring.valueOf(n))
+// return new StringBuilder(String.valueOf(n))
 //         .reverse()
 //         .chars()
 //         .map(Character::getNumericValue)

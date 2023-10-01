@@ -1,5 +1,6 @@
 package main.java.Kata.Practeice.Test;
 
+import java.util.Arrays;
 import java.util.List;
 
 //In this kata you will create a function that takes a list
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class ListFiltering {
     public static void main(String[] args) {
-
+        List<Object> integers = Arrays.asList("44", "373", "xyz", "145");
     }
     public static List<Object> filterList(final List<Object> list) {
         // Return the List with the Strings filtered out
