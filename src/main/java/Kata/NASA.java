@@ -2,6 +2,7 @@ package main.java.Kata;
 
 public class NASA {
     public static void main(String[] args) {
+
         makeAbbr("national aeronautics space administration");
     }
 

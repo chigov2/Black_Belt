@@ -81,15 +81,15 @@ public class StreamLessons {
                 .forEach(System.out::println);
 
         System.out.println("--------------------------");
-//        List<String> integers = Arrays.asList("44", "373", "xyz", "145");
-//        integers.forEach(str1 -> {
-//                    try {
-//                        System.out.println(Integer.parseInt(str1));
-//                    }catch (NumberFormatException ex) {
-//                        System.out.println("Can't format this string");
-//                    }
-//                }
-//        );
+        List<String> integers = Arrays.asList("44", "373", "xyz", "145");
+        integers.forEach(str1 -> {
+                    try {
+                        System.out.println(Integer.parseInt(str1));
+                    }catch (NumberFormatException ex) {
+                        System.out.println("Can't format this string");
+                    }
+                }
+        );
 
         System.out.println("-------flatMapToInt-------------------");
         Stream.of(2, 3, 0, 1, 3)
