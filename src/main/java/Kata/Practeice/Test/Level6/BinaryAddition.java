@@ -7,7 +7,9 @@ public class BinaryAddition {
     }
 
     public static String binaryAddition(int a, int b){
-        //your code here
-        return "";
+        int sum = a + b;
+        String s = Integer.toBinaryString(sum);
+        System.out.println(s);
+        return s;
     }
 }
