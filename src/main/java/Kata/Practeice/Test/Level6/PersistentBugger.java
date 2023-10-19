@@ -13,7 +13,6 @@ public class PersistentBugger {
 
         if (n / 10 == 0)
             return 0;
-
         long result = 1;
         for (long i = n; n != 0; n /= 10) {
             result *= (n % 10);
