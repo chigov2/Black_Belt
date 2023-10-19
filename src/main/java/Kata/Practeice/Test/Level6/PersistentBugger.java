@@ -5,10 +5,20 @@ package main.java.Kata.Practeice.Test.Level6;
 
 public class PersistentBugger {
     public static void main(String[] args) {
-        persistence(5);
+
+        persistence(400);
     }
 
     public static int persistence(long n) {
-        return 0;
+
+        if (n / 10 == 0)
+            return 0;
+
+        long result = 1;
+        for (long i = n; n != 0; n /= 10) {
+            result *= (n % 10);
+            System.out.println(result);
+        }
+        return persistence(result) + 1;
     }
 }
