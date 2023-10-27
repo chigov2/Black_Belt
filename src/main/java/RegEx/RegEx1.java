@@ -9,19 +9,24 @@ public class RegEx1 {
                 "Petrova Marina,  56 Wall st, 23654, Ukraine, email: petrova@gmail.com, +380631811501";
 
 //        Pattern pattern = Pattern.compile("\\w+");
+        Pattern pattern = Pattern.compile("[a-zA-Z]");
+//        Pattern pattern = Pattern.compile("a-zA-Z");
 //        Pattern pattern = Pattern.compile("\\b\\d{2}\\b");
 //        Pattern pattern = Pattern.compile("\\+\\d{4,12}");
         //email
 //        Pattern pattern = Pattern.compile("\\w{1,15}@\\w+\\.\\w+");
 //        Pattern pattern = Pattern.compile("\\w{1,15}@\\w+\\.(ru|com)");
 
-        Pattern pattern = Pattern.compile("(\\w|\\W)\\s+\\w");
+//        Pattern pattern = Pattern.compile("(\\w|\\W)\\s+\\w");
 
 //        Pattern pattern = Pattern.compile("I(1)");
         Matcher matcher = pattern.matcher(s);
+        String s1 = "";
         while (matcher.find()){
 //            System.out.println("Position: " + matcher.start() + " " + matcher.group());
-            System.out.println(matcher.group());
+            System.out.print(matcher.group());
+            s1 = matcher.group();
         }
+        System.out.println("s1: " + s1);
     }
 }
