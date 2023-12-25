@@ -15,8 +15,10 @@ public class BuildTower {
 
     public static String[] towerBuilder(int nFloors)
     {
-        for (int i = 1; i <= nFloors; i++) {
+
+        for (int i = 1; i < nFloors; i++) {
             // white spaces in the front of the numbers
+            System.out.print("\"");
             int numberOfWhiteSpaces = nFloors - i;
 
             //print leading white spaces
@@ -26,6 +28,8 @@ public class BuildTower {
             printString("* ", i);
 
             //move to next line
+            printString(" ", numberOfWhiteSpaces-1);
+            System.out.print("\"");
             System.out.println("");
         }
 
